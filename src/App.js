@@ -10,6 +10,8 @@ import Booking from './Pages/Booking/Booking';
 import Login from './Pages/Login/Login/Login';
 import AuthProvider from './Contexts/AuthProvider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import ManageEvent from './Pages/ManageEvent/ManageEvent';
+import NotFound from './Pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -32,6 +34,12 @@ function App() {
             </PrivateRoute>
             <Route path="/login">
               <Login></Login>
+            </Route>
+            <Route path="/manageevents">
+              <ManageEvent></ManageEvent>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
             </Route>
           </Switch>
             <Footers></Footers>
