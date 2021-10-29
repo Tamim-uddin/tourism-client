@@ -4,6 +4,7 @@ import './Footers.css';
 const Footers = () => {
     return (
         <div className="footer">
+            {/* footer details */}
             <div>
                 <h3>About Us</h3>
                 <p>Tourism security is a subdiscipline of tourist studies that explores the factors that affect the ontological security of tourists. Risks are evaluated by their impact and nature.</p>

@@ -10,7 +10,7 @@ const Banners = () => {
         
             
             <div className="banners">
-
+                {/* set the img url */}
             <Carousel>
                 <Carousel.Item>
                     <img

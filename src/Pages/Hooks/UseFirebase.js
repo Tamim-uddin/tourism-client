@@ -3,9 +3,10 @@ import { useEffect } from "react";
 import { useState } from "react";
 import initializeAuthentication from "../Login/Firebase/firebase.init";
 
-
+// call the initialize function
 initializeAuthentication();
 
+// google signin setup 
 const Usefirebase = () => {
     const [user, setuser] = useState({});
     const [isloading, setisloading] = useState(true);

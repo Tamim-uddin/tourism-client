@@ -8,7 +8,7 @@ const Tour = (props) => {
     
     return (
         <div className="tour">
-            <img src={img}/>
+            <img src={img} alt=""/>
             <h3>{name}</h3>
             <p>{des}</p>
             <div className="tour-last">

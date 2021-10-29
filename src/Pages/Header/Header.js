@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
-import { useIsRTL } from 'react-bootstrap/esm/ThemeProvider';
+
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import UseAuth from '../Hooks/UseAuth';
@@ -22,8 +22,6 @@ const Header = () => {
       {user?.email ?
           <Button onClick={logout} variant="light">Logout</Button> :
           <Nav.Link as={HashLink} to="/login">Login</Nav.Link>}
-
-      
       <Navbar.Text>
         Signed in as: <a href="#login">{user?.displayName}</a>
       </Navbar.Text>

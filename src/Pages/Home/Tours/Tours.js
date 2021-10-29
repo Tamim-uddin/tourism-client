@@ -4,6 +4,8 @@ import { useState } from 'react';
 import Tour from '../Tour/Tour';
 import './Tours.css';
 
+
+// set the tourism place
 const Tours = () => {
     const [tours, settours] = useState([]);
     useEffect( () => {
