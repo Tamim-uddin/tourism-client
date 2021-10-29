@@ -8,16 +8,17 @@ initializeAuthentication();
 
 const Usefirebase = () => {
     const [user, setuser] = useState({});
+    const [isloading, setisloading] = useState(true);
 
 
     const Googleprovider = new GoogleAuthProvider();
     const auth = getAuth();
 
     const signinwithgoogle = () => {
-        signInWithPopup(auth, Googleprovider)
-        .then(result => {
-            setuser(result.user);
-        })
+        setisloading(true);
+       return signInWithPopup(auth, Googleprovider)
+        
+        .finally(() => setisloading(false));
     }
 
     useEffect( () => {
@@ -28,22 +29,26 @@ const Usefirebase = () => {
             else {
                 setuser({})
             }
+            setisloading(false);
         });
         return () => unsubscribed;
     } , [])
 
     const logout = () =>{
+        setisloading(true)
         signOut(auth)
         .then( () => {
 
-        });
+        })
+        .finally(() => setisloading(false));
     }
 
 
     return{
         user,
         signinwithgoogle,
-        logout
+        logout,
+        isloading
     }
 }
 

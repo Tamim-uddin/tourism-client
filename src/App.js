@@ -9,6 +9,7 @@ import Footers from './Pages/Footers/Footers';
 import Booking from './Pages/Booking/Booking';
 import Login from './Pages/Login/Login/Login';
 import AuthProvider from './Contexts/AuthProvider';
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -26,9 +27,9 @@ function App() {
             <Route path="/addtours">
               <Addtours></Addtours>
             </Route>
-            <Route path="/bokking/:id">
+            <PrivateRoute path="/bokking/:id">
               <Booking></Booking>
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Login></Login>
             </Route>
