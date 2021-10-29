@@ -7,8 +7,8 @@ const Addtours = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data);
-        
-        axios.post('http://localhost:5000/tours', data)
+
+        axios.post('https://limitless-chamber-81508.herokuapp.com/tours', data)
         .then(res => {
             console.log(res);
         })

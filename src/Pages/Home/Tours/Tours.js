@@ -9,7 +9,7 @@ import './Tours.css';
 const Tours = () => {
     const [tours, settours] = useState([]);
     useEffect( () => {
-        fetch('http://localhost:5000/tours')
+        fetch('https://limitless-chamber-81508.herokuapp.com/tours')
         .then(res => res.json())
         .then(data => settours(data))
     } , [])
