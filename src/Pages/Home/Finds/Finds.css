@@ -1,0 +1,21 @@
+.finds{
+    background-color:  #01a2a6;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+.finds h4{
+    border-bottom: 1px solid white;
+    color:  #fff199;
+}
+.finds button {
+    font-size: 30px;
+    border: 1px solid #909195;
+    border-radius: 10px;
+    
+}
+.finds button:hover{
+    background-color: #01a2a6;
+}
