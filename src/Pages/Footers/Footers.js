@@ -12,19 +12,19 @@ const Footers = () => {
                 <p>01 800 688 8688</p>
             </div>
             <div>
-                <h3>SERVICES</h3>
-                <p>hourly care</p>
-                <p>daily care</p>
-                <p>hospital to home</p>
+                <h3>Links</h3>
+                <p>Destinations</p>
+                <p>Tours</p>
+                <p>Contact</p>
                 <p>respite care</p>
-                <p>specialized care</p>
+                <p>Faq's</p>
             </div>
             <div>
-                <h3>DEPARTMENTS</h3>
-                <p>about us</p>
-                <p>locations</p>
-                <p>caregivers</p>
-                <p>caregivers</p>
+                <h3>Company</h3>
+                <p>Rewards</p>
+                <p>Locations</p>
+                <p>Community blog</p>
+                <p>Work With Us</p>
                 <p>contact us</p>
             </div>
         </div>

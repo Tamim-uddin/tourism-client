@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Tour.css';
 
 const Tour = (props) => {
@@ -12,7 +13,7 @@ const Tour = (props) => {
             <p>{des}</p>
             <div className="tour-last">
                 <p>${price}</p>
-                <button className="tour-btn">Bokking</button>
+               <Link to={`/bokking/${id}`}> <button className="tour-btn">Bokking</button></Link>
             </div>
         </div>
     );

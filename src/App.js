@@ -6,22 +6,36 @@ import Header from './Pages/Header/Header';
 
 import Addtours from './Pages/Addtours/Addtours';
 import Footers from './Pages/Footers/Footers';
+import Booking from './Pages/Booking/Booking';
+import Login from './Pages/Login/Login/Login';
+import AuthProvider from './Contexts/AuthProvider';
 
 function App() {
   return (
     <div className="App">
-     <Router>
-       <Header></Header>
-       <Switch>
-         <Route path="/">
-            <Home></Home>
-         </Route>
-         <Route path="/addtours">
-           <Addtours></Addtours>
-         </Route>
-       </Switch>
-         <Footers></Footers>
-     </Router>
+     <AuthProvider>
+       <Router>
+          <Header></Header>
+          <Switch>
+            <Route exact path="/">
+                <Home></Home>
+            </Route>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
+            <Route path="/addtours">
+              <Addtours></Addtours>
+            </Route>
+            <Route path="/bokking/:id">
+              <Booking></Booking>
+            </Route>
+            <Route path="/login">
+              <Login></Login>
+            </Route>
+          </Switch>
+            <Footers></Footers>
+        </Router>
+     </AuthProvider>
     </div>
   );
 }

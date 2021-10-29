@@ -7,8 +7,8 @@ import Tours from '../Tours/Tours';
 
 const Home = () => {
     return (
-        <div>
-            <h3>this is from home</h3>
+        <div id="home">
+            
             <Banners></Banners>
             <Finds></Finds>
             <Tours></Tours>

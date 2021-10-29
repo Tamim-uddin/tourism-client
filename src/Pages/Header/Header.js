@@ -1,14 +1,17 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { useIsRTL } from 'react-bootstrap/esm/ThemeProvider';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import UseAuth from '../Hooks/UseAuth';
 
 const Header = () => {
+    const {user, logout} = UseAuth()
     return (
         <div>
            
 <>
-  <Navbar bg="dark" variant="dark">
+  <Navbar bg="dark" variant="dark" collapseOnSelect expand="lg" sticky="top">
     <Container>
     <Navbar.Brand href="#home">Navbar</Navbar.Brand>
     <Navbar.Toggle />
@@ -16,10 +19,13 @@ const Header = () => {
       <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
       <Nav.Link as={HashLink} to="/home#tours">Tours</Nav.Link>
       <Nav.Link as={HashLink} to="/addtours">Add Tours</Nav.Link>
+      {user?.email ?
+          <Button onClick={logout} variant="light">Logout</Button> :
+          <Nav.Link as={HashLink} to="/login">Login</Nav.Link>}
 
       
       <Navbar.Text>
-        Signed in as: <a href="#login">Mark Otto</a>
+        Signed in as: <a href="#login">{user?.displayName}</a>
       </Navbar.Text>
     </Navbar.Collapse>
    

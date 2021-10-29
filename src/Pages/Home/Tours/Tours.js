@@ -12,7 +12,7 @@ const Tours = () => {
         .then(data => settours(data))
     } , [])
     return (
-        <div>
+        <div id="tours">
             <div className="tours-header">
             <h3>Special Deals And last Minute <br />Amazing Offers</h3>
             </div>
