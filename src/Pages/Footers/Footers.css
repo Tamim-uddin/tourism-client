@@ -1,0 +1,19 @@
+.footer{
+    margin-top: 40px;
+    padding:40px;
+    background-color: #333;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+.footer p {
+    color: #909195;
+}
+.footer p:hover{
+    color: white;
+    border-bottom: 1px solid #fff;
+    line-height: 1.8em;
+}
+.footer h3{
+    color: #fff;
+}

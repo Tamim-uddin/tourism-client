@@ -13,13 +13,24 @@
     padding: 10px;
     
 }
-.tour-last p, button{
-    background-color: #3d3d47;
+.tour-last p {
+    background-color: #909195;
     color: white;
     padding: 5px 20px;
     border-radius: 10px;
 }
-.tour-last button{
+.tour-btn{
     font-size: 20px;
     margin-bottom: 10px;
+    background-color: #909195;
+    color: white;
+    padding: 5px 20px;
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+}
+.tour-btn:hover{
+    background-color: teal;
+}
+.tour-last p:hover{
+    background-color: teal;
 }

@@ -12,7 +12,7 @@ const Tour = (props) => {
             <p>{des}</p>
             <div className="tour-last">
                 <p>${price}</p>
-                <button>Bokking</button>
+                <button className="tour-btn">Bokking</button>
             </div>
         </div>
     );

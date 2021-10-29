@@ -3,8 +3,9 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './Pages/Home/Home/Home';
 import Header from './Pages/Header/Header';
-import Footer from './Pages/Home/Footer/Footer';
+
 import Addtours from './Pages/Addtours/Addtours';
+import Footers from './Pages/Footers/Footers';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
            <Addtours></Addtours>
          </Route>
        </Switch>
-         <Footer></Footer>
+         <Footers></Footers>
      </Router>
     </div>
   );
