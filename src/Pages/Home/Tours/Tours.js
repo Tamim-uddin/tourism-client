@@ -20,7 +20,7 @@ const Tours = () => {
             </div>
             <div className="tour-container">
                 {
-                    tours.map(tour => <Tour key={tour.id} tour={tour}></Tour>)
+                    tours.map(tour => <Tour key={tour._id} tour={tour}></Tour>)
                 }
             </div>
         </div>

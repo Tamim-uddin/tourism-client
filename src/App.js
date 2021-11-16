@@ -10,8 +10,10 @@ import Booking from './Pages/Booking/Booking';
 import Login from './Pages/Login/Login/Login';
 import AuthProvider from './Contexts/AuthProvider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
-import ManageEvent from './Pages/ManageEvent/ManageEvent';
+
 import NotFound from './Pages/NotFound/NotFound';
+import ManageAllOrders from './Pages/ManageAllOrders/ManageAllOrders';
+import MyOrders from './Pages/MyOrders/MyOrders';
 
 function App() {
   return (
@@ -29,14 +31,17 @@ function App() {
             <Route path="/addtours">
               <Addtours></Addtours>
             </Route>
-            <PrivateRoute path="/bokking/:id">
+            <PrivateRoute path="/bokking/:_id">
               <Booking></Booking>
             </PrivateRoute>
             <Route path="/login">
               <Login></Login>
             </Route>
-            <Route path="/manageevents">
-              <ManageEvent></ManageEvent>
+            <Route path="/manageallorders">
+              <ManageAllOrders></ManageAllOrders>
+            </Route>
+            <Route path="/myorders">
+              <MyOrders></MyOrders>
             </Route>
             <Route path="*">
               <NotFound></NotFound>

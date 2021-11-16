@@ -4,7 +4,7 @@ import './Tour.css';
 
 const Tour = (props) => {
     // console.log(props);
-    const {id, name, img, des, price} = props.tour;
+    const {id, name, img, des, price, _id} = props.tour;
     
     return (
         <div className="tour">
@@ -13,7 +13,7 @@ const Tour = (props) => {
             <p>{des}</p>
             <div className="tour-last">
                 <p>${price}</p>
-               <Link to={`/bokking/${id}`}> <button className="tour-btn">Bokking</button></Link>
+               <Link to={`/bokking/${_id}`}> <button className="tour-btn">Bokking</button></Link>
             </div>
         </div>
     );

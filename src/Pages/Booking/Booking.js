@@ -3,10 +3,10 @@ import { useParams } from 'react-router';
 import './Booking.css';
 
 const Booking = () => {
-    const { id } = useParams(); 
+    const { _id } = useParams(); 
     return (
         <div className="booking">
-           <h3>this is from booking {id}</h3> 
+           <h3>this is from booking {_id}</h3> 
         </div>
     );
 };
