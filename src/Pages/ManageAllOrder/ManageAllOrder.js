@@ -10,7 +10,7 @@ const ManageAllOrder = ({manageorder, manageorders, setmanageorders}) => {
 
 
     const handleDelete = id => {
-        fetch(`http://localhost:5000/bookings/${id}`, {
+        fetch(`https://limitless-chamber-81508.herokuapp.com/bookings/${id}`, {
             method: 'DELETE',
         })
         .then(res => res.json())

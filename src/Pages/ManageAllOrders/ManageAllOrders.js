@@ -8,7 +8,7 @@ const ManageAllOrders = () => {
    const [manageorders, setmanageorders] = useState([]);
 
     useEffect( () => {
-        fetch('http://localhost:5000/bookings/admin')
+        fetch('https://limitless-chamber-81508.herokuapp.com/bookings/admin')
         .then(res => res.json())
         .then(data => setmanageorders(data))
     } , [])

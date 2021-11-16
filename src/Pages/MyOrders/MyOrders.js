@@ -11,7 +11,7 @@ const MyOrders = () => {
     const {user} = UseAuth();
 
     useEffect( () => {
-        fetch(`http://localhost:5000/bookings?email=${user.email}`)
+        fetch(`https://limitless-chamber-81508.herokuapp.com/bookings?email=${user.email}`)
         .then(res => res.json())
         .then(data => setOrders(data))
     } , [])

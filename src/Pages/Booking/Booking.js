@@ -18,7 +18,7 @@ const Booking = () => {
     
 
     useEffect( () => {
-        fetch(`http://localhost:5000/tours/${_id}`)
+        fetch(`https://limitless-chamber-81508.herokuapp.com/tours/${_id}`)
         .then(res => res.json())
         .then(data => settours(data))
     } , []);
@@ -42,7 +42,7 @@ const Booking = () => {
             price: tours.price
         }
 
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://limitless-chamber-81508.herokuapp.com/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
