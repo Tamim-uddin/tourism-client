@@ -15,7 +15,7 @@ const ManageAllOrders = () => {
 
     return (
         <div>
-            <h3>this is from manage all ordrers {manageorders.length}</h3>
+            <h3>All Orders {manageorders.length}</h3>
             <Grid container spacing={2} >
                 {
                     manageorders.map(manageorder => <ManageAllOrder key={manageorder._id} manageorder={manageorder} manageorders={manageorders} setmanageorders={setmanageorders}></ManageAllOrder>)

@@ -16,7 +16,7 @@ const Tours = () => {
     return (
         <div id="tours">
             <div className="tours-header">
-            <h3>Special Deals And last Minute <br />Amazing Offers</h3>
+            <h3>Special Deals In Our Tour Services</h3>
             </div>
             <div className="tour-container">
                 {
