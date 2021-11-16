@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [my Website](https://tourism-website-33721.web.app/home#tours).
+This project was bootstrapped with [my Website](https://tourism-website-33721.web.app/).
 
 ## About My Website
 
