@@ -1,9 +1,26 @@
+import { Grid } from '@mui/material';
 import React from 'react';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import ManageAllOrder from '../ManageAllOrder/ManageAllOrder';
 
 const ManageAllOrders = () => {
+   const [manageorders, setmanageorders] = useState([]);
+
+    useEffect( () => {
+        fetch('http://localhost:5000/bookings/admin')
+        .then(res => res.json())
+        .then(data => setmanageorders(data))
+    } , [])
+
     return (
         <div>
-            <h3>this is from manage all ordrers</h3>
+            <h3>this is from manage all ordrers {manageorders.length}</h3>
+            <Grid container spacing={2} >
+                {
+                    manageorders.map(manageorder => <ManageAllOrder key={manageorder._id} manageorder={manageorder} manageorders={manageorders} setmanageorders={setmanageorders}></ManageAllOrder>)
+                }
+            </Grid>
         </div>
     );
 };
