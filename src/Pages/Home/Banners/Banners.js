@@ -19,7 +19,7 @@ const Banners = () => {
                     alt="First slide"
                     />
                     <Carousel.Caption>
-                    <h3>Your Journey Begins</h3>
+                    <h3 >Your Journey Begins</h3>
                     <p>A Journey of a 1000 miles starts with  a single step.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
