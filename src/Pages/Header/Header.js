@@ -6,14 +6,15 @@ import UseAuth from '../Hooks/UseAuth';
 import './Header.css';
 
 const Header = () => {
-    const {user, logout} = UseAuth()
+    const {user, logout} = UseAuth();
+    const userPhoto = user?.photoURL;
     return (
-        <div>
+        <div className='header-container'>
            
 <>
-  <Navbar bg="dark" variant="dark" collapseOnSelect expand="lg" sticky="top">
+  <Navbar bg="day" variant="day" collapseOnSelect expand="lg" sticky="top">
     <Container>
-    <Navbar.Brand href="#home" className='nav-text'>Getaway and tour</Navbar.Brand>
+    <Navbar.Brand href="#home" className='nav-text'>Getaway</Navbar.Brand>
     <Navbar.Toggle />
     <Navbar.Collapse className="justify-content-end">
       <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
@@ -26,11 +27,12 @@ const Header = () => {
           <Nav.Link as={HashLink} to="/myorders">My Orders</Nav.Link>
           <Nav.Link as={HashLink} to="/manageallorders">Manage all Orders</Nav.Link>
           <Button onClick={logout} variant="light">Logout</Button> 
+          <Navbar.Text>
+            <img style={{height: '40px', width: '40px' , borderRadius: '20px', marginRight: '5px', marginLeft: '10px'}} src= {userPhoto} alt='user'/><a href="#login">{user?.displayName}</a>
+          </Navbar.Text>
           </> :  
           <Nav.Link as={HashLink} to="/login">Login</Nav.Link>}
-      <Navbar.Text>
-        Signed in as: <a href="#login">{user?.displayName}</a>
-      </Navbar.Text>
+      
     </Navbar.Collapse>
    
     </Container>
