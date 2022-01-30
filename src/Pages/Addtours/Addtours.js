@@ -19,8 +19,11 @@ const Addtours = () => {
             <form onSubmit={handleSubmit(onSubmit)}>
             <input {...register("img")} placeholder="Img Url"/> <br />
             <input {...register("name", { required: true, maxLength: 20 })} placeholder="Name" /> <br />
+            <input {...register("loc", { required: true, maxLength: 20 })} placeholder="Location" /> <br />
             <textarea {...register("des")} placeholder="Description"/> <br />
             <input type="number" {...register("price")} placeholder="Price" /> <br />
+            <input type="number" {...register("age")} placeholder="age" /> <br />
+            <input type="number" {...register("daytime")} placeholder="Daytime" /> <br />
             <input type="submit" />
             </form>
 

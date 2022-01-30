@@ -1,3 +1,4 @@
+import { Grid } from '@mui/material';
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -19,9 +20,15 @@ const Tours = () => {
             <h3>Special Deals In Our Tour Services</h3>
             </div>
             <div className="tour-container">
+            <Grid container spacing={1}>
+  
                 {
                     tours.map(tour => <Tour key={tour._id} tour={tour}></Tour>)
                 }
+  
+  
+            </Grid>
+                
             </div>
         </div>
     );

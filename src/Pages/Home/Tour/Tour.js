@@ -1,21 +1,32 @@
+import { Grid } from '@mui/material';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Tour.css';
 
+
 const Tour = (props) => {
     // console.log(props);
     const {id, name, img, des, price, _id} = props.tour;
+
     
     return (
-        <div className="tour">
-            <img src={img} alt=""/>
-            <h3>{name}</h3>
-            <p>{des}</p>
-            <div className="tour-last">
-                <p>${price}</p>
-               <Link to={`/bokking/${_id}`}> <button className="tour-btn">Bokking</button></Link>
-            </div>
+        <Grid item xs={12} sm={6} md={4}>
+    
+ 
+        <div className="container">
+            <img src={img} alt="" className="image" />
+                <div className="overlay">
+                    <div className="text">
+                        <h3>{name}</h3>
+                        
+                            {/* <div className="tour-last"> */}
+                                    <p>${price}</p>
+                                <Link to={`/bokking/${_id}`}> <button className="tour-btn">Details</button></Link>
+                            {/* </div> */}
+                    </div>
+                 </div>
         </div>
+        </Grid>
     );
 };
 
