@@ -5,9 +5,14 @@ import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import './Booking.css';
-import { Alert, TextField } from '@mui/material';
+import { Alert, Container, TextField } from '@mui/material';
 import Button from '@mui/material/Button';
 import UseAuth from '../Hooks/UseAuth';
+import AccessTimeRoundedIcon from '@mui/icons-material/AccessTimeRounded';
+import PersonOutlineRoundedIcon from '@mui/icons-material/PersonOutlineRounded';
+import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
+import MonetizationOnOutlinedIcon from '@mui/icons-material/MonetizationOnOutlined';
+
 
 
 const Booking = () => {
@@ -72,12 +77,37 @@ const Booking = () => {
                             <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                                <img style={{width: '90%', }} src={tours.img} alt="" />
                             </Typography>
-                            <Typography variant="h5" component="div" sx={{ ml: '65px', textAlign: 'left', background: 'white', position: 'absolute', bottom: '93px', left: '16px', p: '5px', borderTopRightRadius: '5px', fontFamily: 'Lucida Handwriting'}}>
+                            <Typography variant="h5" component="div" sx={{ ml: '65px', textAlign: 'left', background: 'white', position: 'absolute', bottom: '190px', left: '16px', p: '5px', borderTopRightRadius: '5px', fontFamily: 'Lucida Handwriting'}}>
                                 {tours.name}
                             </Typography>
-                            <Typography sx={{  ml: '65px', textAlign: 'left'}} >
-                             ${tours.price}
-                            </Typography>
+                            <Container>
+                            <Grid container spacing={1} sx={{ml: '60px', backgroundColor: 'rgba(0,0,0,.2)', borderRadius: '5px', width: '40%', p: '10px', mt: '30px', mb: '10px'}}>
+                                <Grid item xs={6} md={3}>
+                                 <AccessTimeRoundedIcon />
+                                </Grid>
+                                <Grid item xs={6} md={3}>
+                                    <PersonOutlineRoundedIcon />
+                                </Grid>
+                                <Grid item xs={6} md={3}>
+                                   <FmdGoodOutlinedIcon />
+                                </Grid>
+                                <Grid item xs={6} md={3}>
+                                    <MonetizationOnOutlinedIcon />
+                                </Grid>
+                                <Grid item xs={6} md={3}>                                
+                                    {tours.daytime} Days
+                                </Grid>
+                                <Grid item xs={6} md={3}>
+                                    {tours.age} Age+
+                                </Grid>
+                                <Grid item xs={6} md={3}>
+                                    {tours.loc}
+                                </Grid>
+                                <Grid item xs={6} md={3}>
+                                    ${tours.price}
+                                </Grid>
+                            </Grid>
+                            </Container>
                             <Typography variant="body2" sx={{ ml: '65px', textAlign: 'left', width: '50%', fontFamily: 'Verdana'}}>
                                 {tours.des}
                             </Typography>
@@ -85,7 +115,7 @@ const Booking = () => {
                        
                     </Card>
                 </Grid>
-                <Grid item xs={4} sm={4} md={12} sx={{ position: 'absolute', width: '30%', bottom: '-120px', right: '120px', background: 'white', borderRadius: '5px'}}>
+                <Grid item xs={4} sm={4} md={12} sx={{ position: 'absolute', width: '30%', bottom: '10px', right: '120px', background: 'white', borderRadius: '5px'}}>
               
                     <form onSubmit={handleonSubmit}>
                         <TextField 
@@ -107,18 +137,19 @@ const Booking = () => {
                         variant="standard" /> <br />
                         <TextField
                         sx={{width: '90%', mb: 2}} 
-                                           
-                        label="Tour Name"
+                        disabled                                          
+                        // label="Tour Name"
                         name="tourName"
-                        defaultValue={tours.name}
+                        value={tours.name}
                         variant="standard" /> <br />
                         <TextField
                         disabled
                         sx={{width: '90%', mb: 2}}                        
-                        label="Price"
-                        defaultValue={tours?.price}
+                        // label="Price"
+                        name="price"
+                        value={tours.price}
                         variant="standard" /> <br />
-                        <Button type="submit" variant="contained">Place Order</Button>
+                        <Button sx={{backgroundColor: 'rgba(0,0,0,.5)'}} type="submit" variant="contained">Place Order</Button>
                     </form>
                 </Grid>
                 
