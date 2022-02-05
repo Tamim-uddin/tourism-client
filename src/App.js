@@ -14,6 +14,7 @@ import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import NotFound from './Pages/NotFound/NotFound';
 import ManageAllOrders from './Pages/ManageAllOrders/ManageAllOrders';
 import MyOrders from './Pages/MyOrders/MyOrders';
+import Register from './Pages/Register/Register';
 
 function App() {
   return (
@@ -36,6 +37,9 @@ function App() {
             </PrivateRoute>
             <Route path="/login">
               <Login></Login>
+            </Route>
+            <Route path="/register">
+              <Register></Register>
             </Route>
             <Route path="/manageallorders">
               <ManageAllOrders></ManageAllOrders>

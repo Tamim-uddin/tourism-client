@@ -1,4 +1,4 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { useEffect } from "react";
 import { useState } from "react";
 import initializeAuthentication from "../Login/Firebase/firebase.init";
@@ -10,17 +10,67 @@ initializeAuthentication();
 const Usefirebase = () => {
     const [user, setuser] = useState({});
     const [isloading, setisloading] = useState(true);
-
+    const [error, seterror] = useState('');
 
     const Googleprovider = new GoogleAuthProvider();
     const auth = getAuth();
 
-    const signinwithgoogle = () => {
+    // sign in with google
+    const signinwithgoogle = (location, history) => {
         setisloading(true);
-       return signInWithPopup(auth, Googleprovider)
-        
+        signInWithPopup(auth, Googleprovider)
+        .then((result) => {
+          const user = result.user;
+          const redierect_uri = location.state?.from || '/';
+          history.push(redierect_uri);
+          seterror('')
+        })
+        .catch((error) => {
+            seterror(error.message)
+        })
         .finally(() => setisloading(false));
     }
+
+    // sign up with email & pass
+    const registerUser = (email, password, name, history) => {
+        setisloading(true);
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                // ...
+
+                history.push('/');
+                seterror('')
+            })
+            .catch((error) => {
+                seterror(error.message)
+            })
+            .finally(() => setisloading(false))
+    }
+  
+    // sign in with email
+    const signInWithEmail = (email, password, location, history) => {
+        setisloading(true);
+        signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            // Signed in 
+            const user = userCredential.user;
+            // ...
+            const redierect_uri = location.state?.from || '/';
+            history.push(redierect_uri);
+            seterror('');
+        })
+        .catch((error) => {
+           seterror(error.message);
+        })
+        .finally(() => setisloading(false))
+    }
+
+
+
+
+
 
     useEffect( () => {
        const unsubscribed = onAuthStateChanged(auth, user => {
@@ -48,8 +98,11 @@ const Usefirebase = () => {
     return{
         user,
         signinwithgoogle,
+        registerUser,
+        signInWithEmail,
         logout,
-        isloading
+        isloading,
+        error
     }
 }
 
