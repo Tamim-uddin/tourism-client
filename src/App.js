@@ -1,16 +1,11 @@
-
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './Pages/Home/Home/Home';
-import Header from './Pages/Header/Header';
-
 import Addtours from './Pages/Addtours/Addtours';
-import Footers from './Pages/Footers/Footers';
 import Booking from './Pages/Booking/Booking';
 import Login from './Pages/Login/Login/Login';
 import AuthProvider from './Contexts/AuthProvider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
-
 import NotFound from './Pages/NotFound/NotFound';
 import ManageAllOrders from './Pages/ManageAllOrders/ManageAllOrders';
 import MyOrders from './Pages/MyOrders/MyOrders';
@@ -21,7 +16,6 @@ function App() {
     <div className="App">
      <AuthProvider>
        <Router>
-      
           <Switch>
             <Route exact path="/">
                 <Home></Home>
@@ -51,7 +45,6 @@ function App() {
               <NotFound></NotFound>
             </Route>
           </Switch>
-          
         </Router>
      </AuthProvider>
     </div>
