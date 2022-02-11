@@ -43,10 +43,10 @@ const Login = () => {
     return (     
         <Box>
             <Grid container spacing={2}>
-                <Grid item xs={12} sm={4} md={6} >
+                <Grid item xs={12} sm={6} md={6} >
                     <img src={bg} alt=''/>
                 </Grid>  
-                <Grid item xs={12} sm={8} md={6} sx={{mt: '150px', textAlign: 'center'}}>
+                <Grid item xs={12} sm={6} md={6} sx={{mt: '150px', textAlign: 'center'}}>
                     <h2>Please Login</h2>
                     <form onSubmit={handleOnSubmit}>
                     <TextField 

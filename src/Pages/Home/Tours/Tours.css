@@ -1,15 +1,9 @@
-.tours-header{
-    background-color: #01a2a6;
-    text-align: left;
-    padding: 20px;
+.container-header {
+    border-left: 4px #000 hidden;
+    padding: 50px;
+        
 }
-.tours-header h3{
-    border-left: 2px solid #3d3d47;
-    color:  #fff199;
+.container-mider{
+    border-left: 4px #000 solid;
+    padding: 50px; 
 }
-/* .tour-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    padding: 10px;
-} */

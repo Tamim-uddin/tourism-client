@@ -15,7 +15,6 @@ const Register = () => {
         return <CircularProgress />
     }
     
-
     const handleOnBlur = e => {
         const field = e.target.name;
         const value = e.target.value;
@@ -25,7 +24,6 @@ const Register = () => {
         console.log(field, value, newloginData);
 
     }
-
     const handleOnSubmit = e => {
         e.preventDefault();
         if(loginData.password !== loginData.password2){
@@ -35,14 +33,13 @@ const Register = () => {
         registerUser(loginData.email, loginData.password, loginData.name, history)
     }
 
-
     return (
         <Box>
             <Grid container spacing={2}>
-                <Grid item xs={12} sm={4} md={6} >
+                <Grid item xs={12} sm={6} md={6} >
                     <img src={bg} alt=''/>
                 </Grid> 
-                <Grid item xs={12} sm={8} md={6} sx={{mt: '150px', textAlign: 'center'}}>
+                <Grid item xs={12} sm={6} md={6} sx={{mt: '150px', textAlign: 'center'}}>
                     <Typography variant="h3" gutterBottom component="div">
                         Please Register
                     </Typography>

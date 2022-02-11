@@ -2,6 +2,7 @@ import { Grid } from '@mui/material';
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import {Typography } from '@mui/material';
 import Tour from '../Tour/Tour';
 import './Tours.css';
 
@@ -15,11 +16,15 @@ const Tours = () => {
         .then(data => settours(data))
     } , [])
     return (
-        <div id="tours">
-            <div className="tours-header">
-            <h3>Special Deals In Our Tour Services</h3>
+        <div>
+            <div className='container-header'>
+            <Typography className='container-mider'  variant="h3" gutterBottom component="div" sx={{textAlign: 'left', fontFamily: 'Montserrat,sans-serif', color: '#303030', fontWeight: '500'}}>
+            Choose The
+            <span style={{color: '#000', fontWeight: '900', fontFamily: 'Montserrat,sans-serif', fontSize: '50px'}}> Destination <br />Just Right </span> 
+            For Your <br /> Vacation
+            </Typography>
             </div>
-            <div className="tour-container">
+            
             <Grid container spacing={1}>
   
                 {
@@ -29,7 +34,7 @@ const Tours = () => {
   
             </Grid>
                 
-            </div>
+           
         </div>
     );
 };
