@@ -1,26 +1,9 @@
-.subcribe{
-    background-color: #01a2a6;
-    padding: 40px;
-    text-align: left;
-    
-}
-.subcribe input{
-    background-color: #01a2a6;
-    border: 1px solid #01a2a6;
-    border-bottom: 1px solid black;
-    margin-bottom: 20px;
-    
-}
-.sub-hed{
-    color: #fff199;
-    font-size: 30px;
-}
-.sub-btn{
-    font-size: 20px;
-    border: 1px solid #909195;
-    border-radius: 10px;
-    padding: 5px 20px;
-}
-.sub-btn:hover{
-    background-color: #01a2a6;
+.choose-tour {
+    width: 100%;
+    height: 450px;
+    background-image: url(https://cdn.pixabay.com/photo/2020/01/20/22/54/plant-4781624_960_720.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 120px;
 }

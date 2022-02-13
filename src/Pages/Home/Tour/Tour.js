@@ -6,7 +6,7 @@ import './Tour.css';
 
 const Tour = (props) => {
     // console.log(props);
-    const {id, name, img, des, price, _id} = props.tour;
+    const {name, img, price, _id} = props.tour;
 
     
     return (

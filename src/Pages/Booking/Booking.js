@@ -144,7 +144,7 @@ const Booking = () => {
                         variant="standard" /> <br />
                         <Button sx={{backgroundColor: 'rgba(0,0,0,.5)'}} type="submit" variant="contained">Place Order</Button>
                     </form>
-                    {bookingSuccessfull && <Alert sx={{mt: '10px'}} severity="success">Tour booked successfully</Alert>}
+                    {bookingSuccessfull && <Alert sx={{mt: '10px'}} severity="success">Order placed successfully</Alert>}
                 </Grid>              
             </Grid> 
         </div>

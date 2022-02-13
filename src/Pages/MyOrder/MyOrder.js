@@ -18,17 +18,15 @@ const MyOrder = ({order, setOrders, Orders}) => {
             alert('Deleted Successfully')
             const remainingorder = Orders.filter(order => order._id !== id)
             setOrders(remainingorder);
-        }
-        
+        }   
     })
     } 
 
     return (
-        <div>
-            
+        <div>   
             <Grid item xs={12} md={12} >
                 <Card sx={{ minWidth: 370, m: 4  }}>
-                        <CardContent>                          
+                    <CardContent>                          
                             <Typography variant="h5" component="div">
                                 {tourName}
                             </Typography>
@@ -41,11 +39,10 @@ const MyOrder = ({order, setOrders, Orders}) => {
                             <Typography sx={{ mb: 1.5 }} color="text.secondary">
                                 {email}
                             </Typography>
-                        </CardContent>
+                    </CardContent>
                         <Button onClick={() => handleDelete(_id)} variant="contained">Delete</Button>
                 </Card>
-            </Grid>
-  
+            </Grid>  
         </div>
     );
 };

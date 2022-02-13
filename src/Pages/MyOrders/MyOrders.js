@@ -2,7 +2,6 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import UseAuth from '../Hooks/UseAuth';
-
 import MyOrder from '../MyOrder/MyOrder';
 import { Grid } from '@mui/material';
 
@@ -14,10 +13,10 @@ const MyOrders = () => {
         fetch(`https://limitless-chamber-81508.herokuapp.com/bookings?email=${user.email}`)
         .then(res => res.json())
         .then(data => setOrders(data))
-    } , [])
+    } , [user.email])
     return (
         <div>
-            <h3>All My Orders {Orders.length}</h3>
+            <h3>My Orders {Orders.length}</h3>
 
             <Grid container spacing={2} >
                 {

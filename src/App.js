@@ -11,6 +11,7 @@ import ManageAllOrders from './Pages/ManageAllOrders/ManageAllOrders';
 import MyOrders from './Pages/MyOrders/MyOrders';
 import Register from './Pages/Register/Register';
 
+
 function App() {
   return (
     <div className="App">
