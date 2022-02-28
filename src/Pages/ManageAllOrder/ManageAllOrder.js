@@ -41,7 +41,7 @@ const ManageAllOrder = ({manageorder, manageorders, setmanageorders}) => {
                                 {email}
                             </Typography>
                         </CardContent>
-                        <Button onClick={ () => handleDelete(_id)}  variant="contained">Delete</Button>
+                        <Button onClick={ () => handleDelete(_id)}  variant="contained" sx={{backgroundColor: '#804d4d', mb: '3px'}}>Delete</Button>
                 </Card>
             </Grid>
         </div>

@@ -35,49 +35,47 @@ const Register = () => {
 
     return (
         <Box>
-            <Grid container spacing={2}>
-                <Grid item xs={12} sm={6} md={6} >
+            <Grid container spacing={2} sx={{ boxShadow: 3, width: '25%', height: '460px', mt: '100px', ml: '500px', p: '30px', border: '1px solid #804d4d', borderRadius: '5px'}}>
+                {/* <Grid item xs={12} sm={6} md={6} >
                     <img src={bg} alt=''/>
-                </Grid> 
-                <Grid item xs={12} sm={6} md={6} sx={{mt: '150px', textAlign: 'center'}}>
-                    <Typography variant="h3" gutterBottom component="div">
-                        Please Register
-                    </Typography>
+                </Grid>  */}
+                <Grid item xs={12} sm={6} md={12}  sx={{textAlign: 'center', mt: '20px'}}>
+                <h1 style={{fontFamily:'"Playfair Display",serif'}}>Please Register</h1>
                     <form onSubmit={handleOnSubmit}>
                     <TextField 
-                    sx={{width: '75%'}}
+                    sx={{width: '100%'}}
                     label="Your Name" 
                     name="name"
                     onBlur={handleOnBlur}
                     variant="standard" /> <br />
                     <TextField 
-                    sx={{width: '75%'}}
+                    sx={{width: '100%'}}
                     label="Your Email" 
                     name="email"
                     type="email"
                     onBlur={handleOnBlur}
                     variant="standard" /> <br />
                     <TextField 
-                    sx={{width: '60%'}}
+                    sx={{width: '100%'}}
                     label="Your Password" 
                     name="password"
                     type="password"
                     onBlur={handleOnBlur}
                     variant="standard" /> <br />
                     <TextField 
-                    sx={{width: '45%', mb: '5px'}}
+                    sx={{width: '100%', mb: '5px'}}
                     label="Retype Password" 
                     name="password2"
                     type="password"
                     onBlur={handleOnBlur}
                     variant="standard" /> <br />
-                    <Button type='submit' variant='contained'  >Sign Up <ExitToAppRoundedIcon sx={{fontSize: 'medium', ml: '5px'}}/></Button><br />
-                    <NavLink to="/login">Already Register?Please LogIn</NavLink>
-                    </form> <br />
-                    {user.email && <Alert severity="success" sx={{width: '75%'}}>Successfully Register</Alert>};
-                    {error && <Alert severity="error" sx={{width: '75%'}}>{error}</Alert>}
+                    <Button type='submit' variant='contained' sx={{backgroundColor: '#804d4d'}} >Sign Up <ExitToAppRoundedIcon sx={{fontSize: 'medium', ml: '5px'}}/></Button><br /><br />
+                    <NavLink to="/login" style={{color: '#804d4d'}}>Already Register?Please LogIn</NavLink>
+                    </form> <br />     
                 </Grid>
             </Grid>
+            {user.email && <Alert severity="success" sx={{width: '75%'}}>Successfully Register</Alert>};
+             {error && <Alert severity="error" sx={{width: '75%'}}>{error}</Alert>}
         </Box>
     );
 };

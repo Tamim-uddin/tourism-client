@@ -1,12 +1,22 @@
 .tour-added input{
     margin-bottom: 2px;
-    border-radius: 10px;
     border: 1px solid #909195;
-    width: 50%;
+    width: 90%;
+    border-radius: 5px;
 }
 .tour-added textarea{
+    width: 90%;
     margin-bottom: 2px;
-    border-radius: 10px;
     border: 1px solid #909195;
-    width: 50%;
+    border-radius: 5px;
+}
+.tour-added{
+    width: 30%;
+    height: 420px;
+    margin-top: 120px;
+    margin-left: 490px;
+    padding: 30px;
+    border: 1px solid #804d4d;
+    border-radius: 5px;
+    background-color: #c69f9f;
 }
