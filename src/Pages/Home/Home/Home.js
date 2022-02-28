@@ -6,6 +6,7 @@ import Tours from '../Tours/Tours';
 import bg from '../../../Images/background/bg3.png';
 import Header from '../../Header/Header';
 import Footers from '../../Footers/Footers';
+import Aboutus from '../Aboutus/Aboutus';
 
 const homebg = {
     background: `url(${bg})`
@@ -19,6 +20,7 @@ const Home = () => {
             <Finds></Finds>
             <Tours></Tours>
             <Subcribe></Subcribe>
+            <Aboutus></Aboutus>
             <Footers></Footers>
             
         </div>

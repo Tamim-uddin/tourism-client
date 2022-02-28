@@ -1,20 +1,4 @@
-/* .tour{
-    border: 1px solid #d3d3d3;
-    border-radius: 5px;
-} */
 
-/* .tour-last{
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    
-} */
-/* .tour-last p {
-    background-color: #909195;
-    color: white;
-    padding: 5px 20px;
-    border-radius: 10px;
-} */
 .tour-btn{
     font-size: 20px;
     margin-bottom: 10px;
@@ -27,11 +11,6 @@
 .tour-btn:hover{
     background-color: 	rgba(15,15,15,.70);
 }
-/* .tour-last p:hover{
-    background-color: teal;
-} */
-
-
 
 .container {
     position: relative;

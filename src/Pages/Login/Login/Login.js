@@ -68,10 +68,10 @@ const Login = () => {
                     {/* google sign in */}
                     <Button onClick={handlegooglelogin} type="submit"  variant='contained'  sx={{fontSize: '15px'}}><GoogleIcon sx={{fontSize: '25px', color: "yellow", mr: '5px'}}/>Google Sign</Button> <br />
                     <NavLink to="/register">New User?Please Register</NavLink> <br /> 
-                    {user.email && <Alert severity="success" sx={{width: '75%'}}>Successfully Login</Alert>};
-                    {error && <Alert severity="error" sx={{width: '75%'}}>{error}</Alert>}
                 </Grid>
             </Grid>
+            {user.email && <Alert severity="success" sx={{width: '75%'}}>Successfully Login</Alert>};
+            {error && <Alert severity="error" sx={{width: '75%'}}>{error}</Alert>}
         </Box>
        
         
