@@ -75,17 +75,17 @@ const Booking = () => {
                                 {tours.name}
                             </Typography>
                             <Container>
-                            <Grid container spacing={1} sx={{ml: '60px', backgroundColor: 'rgba(0,0,0,.2)', borderRadius: '5px', width: '40%', p: '10px', mt: '30px', mb: '10px'}}>
-                                <Grid item xs={3} md={3}>
+                            <Grid container spacing={2} sx={{ml: '60px', backgroundColor: 'rgba(0,0,0,.2)', borderRadius: '5px', width: '40%', p: '10px', mt: '30px', mb: '10px'}}>
+                                <Grid item xs={3} sm={3} md={3}>
                                  <AccessTimeRoundedIcon />
                                 </Grid>
-                                <Grid item xs={3} md={3}>
+                                <Grid item xs={3} sm={3} md={3}>
                                     <PersonOutlineRoundedIcon />
                                 </Grid>
-                                <Grid item xs={3} md={3}>
+                                <Grid item xs={3} sm={3} md={3}>
                                    <FmdGoodOutlinedIcon />
                                 </Grid>
-                                <Grid item xs={3} md={3}>
+                                <Grid item xs={3} sm={3} md={3}>
                                     <MonetizationOnOutlinedIcon />
                                 </Grid>
                                 <Grid item xs={3} sm={3} md={3}>                                
@@ -144,9 +144,9 @@ const Booking = () => {
                         variant="standard" /> <br />
                         <Button sx={{backgroundColor: 'rgba(0,0,0,.5)'}} type="submit" variant="contained">Place Order</Button>
                     </form>
-                    {bookingSuccessfull && <Alert sx={{mt: '10px'}} severity="success">Order placed successfully</Alert>}
-                </Grid>              
+                </Grid>             
             </Grid> 
+            {bookingSuccessfull && <Alert sx={{mt: '10px'}} severity="success">Order placed successfully</Alert>} 
         </div>
     );
 };
