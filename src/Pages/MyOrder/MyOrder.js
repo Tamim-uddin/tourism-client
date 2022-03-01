@@ -23,9 +23,9 @@ const MyOrder = ({order, setOrders, Orders}) => {
     } 
 
     return (
-        <div>   
-            <Grid item xs={12} md={12} >
-                <Card sx={{ minWidth: 370, m: 4, }}>
+       
+            <Grid item xs={12} sm={6} md={4} sx={{ m: 'auto'}}>
+                <Card sx={{ minWidth: 370 }}>
                     <CardContent>                          
                             <Typography variant="h5" component="div">
                                 {tourName}
@@ -43,7 +43,7 @@ const MyOrder = ({order, setOrders, Orders}) => {
                         <Button onClick={() => handleDelete(_id)} variant="contained" sx={{backgroundColor: '#804d4d', mb: '3px'}}>Delete</Button>
                 </Card>
             </Grid>  
-        </div>
+       
     );
 };
 

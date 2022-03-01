@@ -44,7 +44,6 @@ const Login = () => {
 
 
     return (     
-      
                 <Grid sx={{mt: '40px'}}>
                     <Paper elevation={10} style={{padding: '20px', height: '70vh', width: 280, margin: 'auto', border: '1px solid #804d4d'}}>
                 <Grid  align="center">
@@ -69,17 +68,12 @@ const Login = () => {
                     <Button type='submit' variant='contained'  sx={{fontSize: 'medium', backgroundColor: '#804d4d', mt: '5px'}}>Login<LoginRoundedIcon/></Button><br />
                     </form> <br />
                     {/* google sign in */}
-                    <Button onClick={handlegooglelogin} type="submit"  variant='contained'  sx={{fontSize: '15px', backgroundColor: '#804d4d'}}><FcGoogle sx={{fontSize: '35px', mr: '10px'}}/>Google Sign</Button><br />
-                    
+                    <Button onClick={handlegooglelogin} type="submit"  variant='contained'  sx={{fontSize: '15px', backgroundColor: '#804d4d'}}><FcGoogle sx={{fontSize: '35px', mr: '10px'}}/>Google Sign</Button><br /><br />
                     <NavLink to="/register" style={{color: '#804d4d'}}>New User?Please Register</NavLink><br /> 
-                
                 </Paper>
                 {user.email && <Alert severity="success" sx={{width: '75%'}}>Successfully Login</Alert>};
             {error && <Alert severity="error" sx={{width: '75%'}}>{error}</Alert>}
-        
-            </Grid>
-            
-       
+            </Grid>   
     //    sx={{ boxShadow: 3, width: '35%', height: '420px',margin: 'auto', p: '30px', border: '1px solid 	#804d4d', borderRadius: '5px'}}
     // item xs={12} sm={6} md={12}
     // container spacing={2}
