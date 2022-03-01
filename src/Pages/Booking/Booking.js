@@ -88,16 +88,16 @@ const Booking = () => {
                                 <Grid item xs={3} md={3}>
                                     <MonetizationOnOutlinedIcon />
                                 </Grid>
-                                <Grid item xs={9} md={3}>                                
+                                <Grid item xs={3} sm={3} md={3}>                                
                                     {tours.daytime} Days
                                 </Grid>
-                                <Grid item xs={9} md={3}>
+                                <Grid item xs={3} sm={3} md={3}>
                                     {tours.age} Age+
                                 </Grid>
-                                <Grid item xs={9} md={3}>
+                                <Grid item xs={3} sm={3} md={3}>
                                     {tours.loc}
                                 </Grid>
-                                <Grid item xs={9} md={3}>
+                                <Grid item xs={3} sm={3} md={3}>
                                     ${tours.price}
                                 </Grid>
                             </Grid>

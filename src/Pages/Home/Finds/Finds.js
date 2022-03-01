@@ -59,17 +59,7 @@ export default function Finds() {
           >
             {moment(new Date() - 500 * 60 * 60).fromNow()}
           </Typography>
-          <Tooltip 
-            title = {user?.displayName}
-            sx={{
-              position: 'absolute',
-              right: '3px',
-              bottom: '3px',
-
-            }}
-          >
-            <Avatar src={UserPhoto} />
-          </Tooltip>
+          
         </ImageListItem>
       ))}
     </ImageList>
@@ -140,3 +130,14 @@ const itemData = [
   },
 ];
 
+// // <Tooltip 
+// title = {user?.displayName}
+// sx={{
+//   position: 'absolute',
+//   right: '3px',
+//   bottom: '3px',
+
+// }}
+// >
+// <Avatar src={UserPhoto} />
+// </Tooltip>

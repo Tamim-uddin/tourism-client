@@ -2,43 +2,45 @@ import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import './Banners.css'
 import banner5 from '../../../Images/Banners/banner5.jpg'
-import banner12 from '../../../Images/Banners/banner12.jpg'
-import banner9 from '../../../Images/Banners/banner9.jpg'
+import banner13 from '../../../Images/Banners/banner13.jpg'
+import banner10 from '../../../Images/Banners/banner10.jpg'
 
 const Banners = () => {
+    <meta name='viewport' content='width=device-width,initial-scale=1.0' />
     return (
         
             
-            <div className="banners">
+            <div className="banners responsive">
                 {/* set the img url */}
             <Carousel>
                 <Carousel.Item>
                     <img
-                    className="d-block w-100"
+                    className='img-fluid'
                     src={banner5}
                     alt="First slide"
                     />
                     <Carousel.Caption>
                     <h3 style={{fontFamily: 'Segoe Print'}}>Your Journey Begins </h3>
-                    <p>A Journey of a 1000 miles starts with  a single step</p>
+                    <p>Take a single step</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                    className="d-block w-100"
-                    src={banner12}
+                    className='img-fluid'
+                    src={banner13}
                     alt="Second slide"
                     />
 
                     <Carousel.Caption>
                     <h3 style={{fontFamily: 'Segoe Print'}}>The journey is my home</h3>
-                    <p>I love to travel, but hate to arrive </p>
+                    <p>I love to travel</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                    className="d-block w-100"
-                    src={banner9}
+                    // className="d-block w-100"
+                    className='img-fluid'
+                    src={banner10}
                     alt="Third slide"
                     />
 
