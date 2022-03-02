@@ -1,4 +1,5 @@
 
+import { Box } from '@mui/material';
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { HashLink } from 'react-router-hash-link';
@@ -6,7 +7,7 @@ import UseAuth from '../Hooks/UseAuth';
 import './Header.css';
 
 const Header = () => {
-    const {user, logout} = UseAuth();
+    const {user, logout, admin} = UseAuth();
     const userPhoto = user?.photoURL;
     return (
       <div className='header-container'>           
@@ -21,11 +22,17 @@ const Header = () => {
                       
                       {user?.email ?
                       <>
-                      <Nav.Link as={HashLink} to="/addtours">Add Tours</Nav.Link>
+                      {admin && 
+                        <>
+                           
+                     <Nav.Link as={HashLink} to="/addtours">Add Tours</Nav.Link>
                       <Nav.Link as={HashLink} to="/makeadmin">Make Admin</Nav.Link>
+                      <Nav.Link as={HashLink} to="/manageallorders">Manage all Orders</Nav.Link>
+                   
+                        </>
+                      }
                       <Nav.Link as={HashLink} to="/addreviews">Add Reviews</Nav.Link>
                       <Nav.Link as={HashLink} to="/myorders">My Orders</Nav.Link>
-                      <Nav.Link as={HashLink} to="/manageallorders">Manage all Orders</Nav.Link>
                       <Button onClick={logout} variant="light">Logout</Button> 
                       <Navbar.Text>
                         <img style={{height: '40px', width: '40px' , borderRadius: '20px', marginRight: '5px', marginLeft: '10px'}} src= {userPhoto} alt='user'/><a href="#login">{user?.displayName}</a>

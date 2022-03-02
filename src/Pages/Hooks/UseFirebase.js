@@ -11,6 +11,7 @@ const Usefirebase = () => {
     const [user, setuser] = useState({});
     const [isloading, setisloading] = useState(true);
     const [error, seterror] = useState('');
+    const [admin, setadmin] = useState(false);
 
     const Googleprovider = new GoogleAuthProvider();
     const auth = getAuth();
@@ -114,9 +115,17 @@ const Usefirebase = () => {
        .then()
    }
 
+//    secure admin
+   useEffect( () => {
+       fetch(`http://localhost:5000/users/${user.email}`)
+       .then(res => res.json())
+       .then(data => setadmin(data.admin))
+   } , [user.email])
+
 
     return{
         user,
+        admin,
         signinwithgoogle,
         registerUser,
         signInWithEmail,
