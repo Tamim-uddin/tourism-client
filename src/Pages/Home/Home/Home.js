@@ -7,6 +7,7 @@ import bg from '../../../Images/background/bg3.png';
 import Header from '../../Header/Header';
 import Footers from '../../Footers/Footers';
 import Aboutus from '../Aboutus/Aboutus';
+import Addreviews from '../../Addreviews/Addreviews';
 
 const homebg = {
     background: `url(${bg})`
@@ -21,6 +22,7 @@ const Home = () => {
             <Tours></Tours>
             <Subcribe></Subcribe>
             <Aboutus></Aboutus>
+            <Addreviews></Addreviews>
             <Footers></Footers>
             
         </div>
