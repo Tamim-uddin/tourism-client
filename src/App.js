@@ -12,6 +12,7 @@ import MyOrders from './Pages/MyOrders/MyOrders';
 import Register from './Pages/Register/Register';
 import Addreviews from './Pages/Addreviews/Addreviews';
 import Makeadmin from './Pages/Makeadmin/Makeadmin';
+import AdminRoute from './Pages/AdminRoute/AdminRoute';
 
 
 function App() {
@@ -26,15 +27,15 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            <Route path="/addtours">
+            <AdminRoute path="/addtours">
               <Addtours></Addtours>
-            </Route>
+            </AdminRoute>
             <Route path="/addreviews">
               <Addreviews></Addreviews>
             </Route>
-            <Route path="/makeadmin">
+            <AdminRoute path="/makeadmin">
               <Makeadmin></Makeadmin>
-            </Route>
+            </AdminRoute>
             <PrivateRoute path="/bokking/:_id">
               <Booking></Booking>
             </PrivateRoute>
@@ -44,9 +45,9 @@ function App() {
             <Route path="/register">
               <Register></Register>
             </Route>
-            <Route path="/manageallorders">
+            <AdminRoute path="/manageallorders">
               <ManageAllOrders></ManageAllOrders>
-            </Route>
+            </AdminRoute>
             <Route path="/myorders">
               <MyOrders></MyOrders>
             </Route>

@@ -13,7 +13,7 @@ const Addreviews = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('http://localhost:5000/reviews', data)
+        axios.post('https://limitless-chamber-81508.herokuapp.com/reviews', data)
         .then(res => {
             console.log(res)
         })
