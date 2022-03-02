@@ -17,7 +17,7 @@ const Aboutus = () => {
                 </Grid>
                 <Grid item xs={12} sm={6} md={7}>
                 <Container>
-                    <Grid item xs={12} sm={12} md={12}>
+                    <Grid item xs={12} sm={12} md={12} sx={{mt: '40px'}}>
                         <img style={{width: '99%', height: '400px'}}  src='https://cdn.pixabay.com/photo/2020/02/06/18/43/santorini-4825173_960_720.jpg' alt=''/>
                     </Grid>
                         <Grid container spacing={2}>

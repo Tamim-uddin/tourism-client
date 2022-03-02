@@ -22,6 +22,7 @@ const Header = () => {
                       {user?.email ?
                       <>
                       <Nav.Link as={HashLink} to="/addtours">Add Tours</Nav.Link>
+                      <Nav.Link as={HashLink} to="/addreviews">Add Reviews</Nav.Link>
                       <Nav.Link as={HashLink} to="/myorders">My Orders</Nav.Link>
                       <Nav.Link as={HashLink} to="/manageallorders">Manage all Orders</Nav.Link>
                       <Button onClick={logout} variant="light">Logout</Button> 

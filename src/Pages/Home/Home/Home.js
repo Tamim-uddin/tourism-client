@@ -8,6 +8,7 @@ import Header from '../../Header/Header';
 import Footers from '../../Footers/Footers';
 import Aboutus from '../Aboutus/Aboutus';
 import Addreviews from '../../Addreviews/Addreviews';
+import Reviews from '../../Reviews/Reviews';
 
 const homebg = {
     background: `url(${bg})`
@@ -22,7 +23,7 @@ const Home = () => {
             <Tours></Tours>
             <Subcribe></Subcribe>
             <Aboutus></Aboutus>
-            <Addreviews></Addreviews>
+            <Reviews></Reviews>
             <Footers></Footers>
             
         </div>

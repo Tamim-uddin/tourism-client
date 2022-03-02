@@ -10,6 +10,7 @@ import NotFound from './Pages/NotFound/NotFound';
 import ManageAllOrders from './Pages/ManageAllOrders/ManageAllOrders';
 import MyOrders from './Pages/MyOrders/MyOrders';
 import Register from './Pages/Register/Register';
+import Addreviews from './Pages/Addreviews/Addreviews';
 
 
 function App() {
@@ -26,6 +27,9 @@ function App() {
             </Route>
             <Route path="/addtours">
               <Addtours></Addtours>
+            </Route>
+            <Route path="/addreviews">
+              <Addreviews></Addreviews>
             </Route>
             <PrivateRoute path="/bokking/:_id">
               <Booking></Booking>

@@ -1,0 +1,14 @@
+.img-fluid {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 800px) {
+    .responsive {
+        padding: 0px 10px;
+    }
+    .responsive img {
+        width: 100%;
+        height: auto;
+    }
+}
