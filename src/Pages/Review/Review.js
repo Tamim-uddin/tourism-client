@@ -10,7 +10,7 @@ const Review = ({review}) => {
         <Grid item xs={12} sm={6} md={4} >
        <Container>
             <Card sx={{ minWidth: 275, boxShadow: 3 }}>
-            <CardContent>
+              <CardContent>
                 <img className='img-fluid'  style={{width: '80px', height: '80px', border: '.1px solid #804d4d' ,borderRadius: '50px'}} src={img} alt= ''/>
                 <Typography variant="h5" component="div">
                   {name}

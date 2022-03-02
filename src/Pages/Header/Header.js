@@ -1,5 +1,4 @@
 
-import { Box } from '@mui/material';
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { HashLink } from 'react-router-hash-link';
@@ -33,7 +32,7 @@ const Header = () => {
                       }
                       <Nav.Link as={HashLink} to="/addreviews">Add Reviews</Nav.Link>
                       <Nav.Link as={HashLink} to="/myorders">My Orders</Nav.Link>
-                      <Button onClick={logout} variant="light">Logout</Button> 
+                      <Button onClick={logout} variant="text" style={{color: 'white'}}>Logout</Button> 
                       <Navbar.Text>
                         <img style={{height: '40px', width: '40px' , borderRadius: '20px', marginRight: '5px', marginLeft: '10px'}} src= {userPhoto} alt='user'/><a href="#login">{user?.displayName}</a>
                       </Navbar.Text>
