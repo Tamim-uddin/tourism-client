@@ -23,7 +23,8 @@ const Usefirebase = () => {
           const user = result.user;
           const redierect_uri = location.state?.from || '/';
           history.push(redierect_uri);
-          seterror('')
+          seterror('');
+          saveUser(user.email, user.displayName, 'PUT');
         })
         .catch((error) => {
             seterror(error.message)
@@ -38,12 +39,13 @@ const Usefirebase = () => {
             .then((userCredential) => {
                 const newUser = {email, displayName: name};
                 setuser(newUser);
+                saveUser(email, name, 'POST');
                 updateProfile(auth.currentUser, {
                     displayName: name
                   }).then(() => {
 
                   }).catch((error) => {
-                      
+
                   });
                   
                 const user = userCredential.user;
@@ -77,10 +79,6 @@ const Usefirebase = () => {
     }
 
 
-
-
-
-
     useEffect( () => {
        const unsubscribed = onAuthStateChanged(auth, user => {
             if (user){
@@ -102,6 +100,19 @@ const Usefirebase = () => {
         })
         .finally(() => setisloading(false));
     }
+
+    // save user
+   const saveUser = (email, displayName, method) => {
+       const user = { email, displayName };
+       fetch('http://localhost:5000/users', {
+           method: method,
+           headers: {
+               'content-type': 'application/json'
+           },
+           body: JSON.stringify(user)
+       })
+       .then()
+   }
 
 
     return{

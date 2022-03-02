@@ -11,6 +11,7 @@ import ManageAllOrders from './Pages/ManageAllOrders/ManageAllOrders';
 import MyOrders from './Pages/MyOrders/MyOrders';
 import Register from './Pages/Register/Register';
 import Addreviews from './Pages/Addreviews/Addreviews';
+import Makeadmin from './Pages/Makeadmin/Makeadmin';
 
 
 function App() {
@@ -30,6 +31,9 @@ function App() {
             </Route>
             <Route path="/addreviews">
               <Addreviews></Addreviews>
+            </Route>
+            <Route path="/makeadmin">
+              <Makeadmin></Makeadmin>
             </Route>
             <PrivateRoute path="/bokking/:_id">
               <Booking></Booking>
