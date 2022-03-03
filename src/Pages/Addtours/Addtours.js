@@ -3,11 +3,15 @@ import { Box } from '@mui/system';
 import axios from 'axios';
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { useLocation } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import UseAuth from '../Hooks/UseAuth';
 import './Addtours.css';
 
 const Addtours = () => {
     const {isloading} = UseAuth();
+    const history = useHistory();
+    const location = useLocation();
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data);
@@ -16,7 +20,13 @@ const Addtours = () => {
         .then(res => {
             console.log(res);
         })
+
+        const redierect_uri = location.state?.from || '/';
+      history.push(redierect_uri);
+
     };
+
+    
     return (
         <Grid sx={{mt: '40px'}}>
          <Paper elevation={10} style={{padding: '20px', height: '70vh', width: 300, margin: 'auto', border: '1px solid #804d4d', backgroundColor: ' #c69f9f'}}>

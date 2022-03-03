@@ -1,6 +1,7 @@
 import { Alert, Button, Grid, Paper, TextField } from '@mui/material';
 import React from 'react';
 import { useState } from 'react';
+import Header from '../Header/Header';
 
 
 const Makeadmin = () => {
@@ -31,6 +32,8 @@ const Makeadmin = () => {
 
     }
     return (
+        <>
+        <Header></Header>
         <Grid sx={{mt: '60px'}} >
              <Paper elevation={10} style={{padding: '20px', height: '35vh', width: 290, margin: 'auto', border: '1px solid #804d4d', backgroundColor: ' #c69f9f'}}>
                 <Grid  align="center">
@@ -46,8 +49,8 @@ const Makeadmin = () => {
             </form>
             </Paper>
             {success && <Alert severity="success">Made Admin Successfully </Alert>}
-
         </Grid>
+        </>
     );
 };
 
